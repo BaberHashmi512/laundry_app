@@ -39,18 +39,21 @@ class _OTPScreenState extends State<OTPScreen> {
             ),
             const SizedBox(height: 30,),
             PinCodeTextField(
-                obscureText: true,
-                animationType: AnimationType.fade,
-                pinTheme: PinTheme(
-                  shape: PinCodeFieldShape.box,
-                  borderRadius: BorderRadius.circular(5),
-                  fieldHeight: 50,
-                  fieldWidth: 40,
-                  activeFillColor: Colors.white,
-                ),
-                backgroundColor: Colors.white,
-                appContext: context,
-                length: 6),
+              obscureText: true,
+              animationType: AnimationType.fade,
+              pinTheme: PinTheme(
+                shape: PinCodeFieldShape.box,
+                borderRadius: BorderRadius.zero, // Set the borderRadius to zero
+                fieldHeight: 50,
+                fieldWidth: 40,
+                activeFillColor: Color(0xFFF3F3F3),
+                inactiveFillColor: Color(0xFFF3F3F3),
+                selectedFillColor: Color(0xFFF3F3F3),
+              ),
+              backgroundColor: Colors.white,
+              appContext: context,
+              length: 6,
+            ),
             const SizedBox(
               height: 10,
             ),
@@ -68,10 +71,23 @@ class _OTPScreenState extends State<OTPScreen> {
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                         color: Colors.pinkAccent),
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
+            SizedBox(height: 30,),
+            SizedBox(
+              width: 360,
+              height: 42,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.pinkAccent,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10))),
+                onPressed: () {},
+                child: Text("Verify", style: TextStyle(color: Colors.white),)
+              ),
+            ),
           ],
         ),
       ),

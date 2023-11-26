@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundary_app/Screens/Auth%20Screens/forgot_password.dart';
 import 'package:laundary_app/Screens/Auth%20Screens/otp.dart';
 import 'package:laundary_app/Screens/Auth%20Screens/register.dart';
 
@@ -47,21 +48,26 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                       hintText: "Password",
                       filled: true,
-                      fillColor: Color(0XFFF3F3F3),
+                      fillColor: const Color(0XFFF3F3F3),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20))),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Align(
+                 Align(
                   alignment: Alignment.bottomRight,
-                  child: Text(
-                    "Forgot Password?",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14,
-                        color: Colors.pinkAccent),
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPassword()));
+                    },
+                    child: Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          color: Colors.pinkAccent),
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -133,19 +139,19 @@ class _LoginScreenState extends State<LoginScreen> {
                  Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(left: 60),
+                    padding: const EdgeInsets.only(left: 60),
                     child: Row(
                       children: [
-                        Text(
+                        const Text(
                           "Don't have an account? ",
                           style: TextStyle(
                               fontSize: 14, fontWeight: FontWeight.w400),
                         ),
                         GestureDetector(
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (ctx)=> RegisterScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (ctx)=> const RegisterScreen()));
                           },
-                          child: Text(
+                          child: const Text(
                             "Sign up now",
                             style: TextStyle(
                                 fontSize: 14,
