@@ -39,22 +39,26 @@ class _ChangePasswordState extends State<ChangePassword> {
             SizedBox(height: 20,),
             TextFormField(
               decoration: InputDecoration(
+                focusedBorder: InputBorder.none,
                   hintText: "Password",
                   filled: true,
                   fillColor: const Color(0XFFF3F3F3),
                   border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(20))),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             TextFormField(
               decoration: InputDecoration(
+                focusedBorder: InputBorder.none,
                   hintText: "Confirm password",
                   filled: true,
                   fillColor: const Color(0XFFF3F3F3),
                   border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(20))),
             ),
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
             SizedBox(
               width: 360,
               height: 42,

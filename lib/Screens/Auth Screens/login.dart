@@ -33,11 +33,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 TextFormField(
                   decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
                     hintText: "Phone Number",
                     filled: true,
                     fillColor: const Color(0XFFF3F3F3),
                     border: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.white),
+                        borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(15)),
                   ),
                 ),
@@ -46,10 +47,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 TextFormField(
                   decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
                       hintText: "Password",
                       filled: true,
                       fillColor: const Color(0XFFF3F3F3),
                       border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
                           borderRadius: BorderRadius.circular(20))),
                 ),
                 const SizedBox(
@@ -61,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPassword()));
                     },
-                    child: Text(
+                    child: const Text(
                       "Forgot Password?",
                       style: TextStyle(
                           fontWeight: FontWeight.w400,

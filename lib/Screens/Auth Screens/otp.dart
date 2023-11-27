@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:laundary_app/Screens/HomePages/home_page.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:pinput/pinput.dart';
 
 class OTPScreen extends StatefulWidget {
   const OTPScreen({super.key});
@@ -38,20 +40,7 @@ class _OTPScreenState extends State<OTPScreen> {
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
             ),
             const SizedBox(height: 30,),
-            PinCodeTextField(
-              obscureText: true,
-              animationType: AnimationType.fade,
-              pinTheme: PinTheme(
-                shape: PinCodeFieldShape.box,
-                borderRadius: BorderRadius.zero, // Set the borderRadius to zero
-                fieldHeight: 50,
-                fieldWidth: 40,
-                activeFillColor: Color(0xFFF3F3F3),
-                inactiveFillColor: Color(0xFFF3F3F3),
-                selectedFillColor: Color(0xFFF3F3F3),
-              ),
-              backgroundColor: Colors.white,
-              appContext: context,
+            const Pinput(
               length: 6,
             ),
             const SizedBox(
@@ -75,7 +64,7 @@ class _OTPScreenState extends State<OTPScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
             SizedBox(
               width: 360,
               height: 42,
@@ -84,8 +73,10 @@ class _OTPScreenState extends State<OTPScreen> {
                     backgroundColor: Colors.pinkAccent,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
-                onPressed: () {},
-                child: Text("Verify", style: TextStyle(color: Colors.white),)
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+                },
+                child: const Text("Verify", style: TextStyle(color: Colors.white),)
               ),
             ),
           ],

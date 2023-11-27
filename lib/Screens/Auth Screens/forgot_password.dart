@@ -13,7 +13,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Register",
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
         ),
@@ -25,14 +25,14 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 100,),
-            Text(
+            const Text(
               "Forgot Password",
               style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 18,
                   color: Colors.pinkAccent),
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Text(
               "Lorem Ipsum, dolor slt consectetur adipisicing elit",
               style: TextStyle(fontWeight: FontWeight.w400, fontSize: 13),
@@ -40,10 +40,12 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             SizedBox(height: 20,),
             TextFormField(
               decoration: InputDecoration(
+                focusedBorder: InputBorder.none,
                   hintText: "Enter Email",
                   filled: true,
                   fillColor: const Color(0XFFF3F3F3),
                   border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(20))),
             ),
             SizedBox(height: 30,),
