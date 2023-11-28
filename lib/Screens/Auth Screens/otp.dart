@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundary_app/Screens/HomePages/home_page.dart';
+import 'package:laundary_app/Screens/bottom_navigation_bar.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:pinput/pinput.dart';
 
@@ -74,7 +75,7 @@ class _OTPScreenState extends State<OTPScreen> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> CurvedBottomNavigationBar()));
                 },
                 child: const Text("Verify", style: TextStyle(color: Colors.white),)
               ),
