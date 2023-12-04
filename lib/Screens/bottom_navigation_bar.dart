@@ -32,7 +32,7 @@ class _CurvedBottomNavigationBarState extends State<CurvedBottomNavigationBar> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         height: 70,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 10,
         child: Container(
           height: 60,
@@ -54,7 +54,7 @@ class _CurvedBottomNavigationBarState extends State<CurvedBottomNavigationBar> {
                   color: currentTab ==0 ? Colors.pinkAccent :Colors.grey,
                   ),
                   ),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   MaterialButton(
                     minWidth: 40,
                     onPressed: (){
