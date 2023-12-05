@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundary_app/Screens/HomePages/add_visa_master_card.dart';
 import 'package:laundary_app/Screens/bottom_navigation_bar.dart';
 import 'package:laundary_app/Screens/splash.dart';
 
@@ -17,8 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         useMaterial3: true,
       ),
-      home:
-      SplashScreen()
+      home: SplashScreen()
       // CurvedBottomNavigationBar()
     );
   }

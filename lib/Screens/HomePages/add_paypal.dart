@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:laundary_app/Widgets/AddPayPalWidgets/pay_pal_widget.dart';
 import 'package:laundary_app/Widgets/home_screen_widgets/bottom_app_bar.dart';
 
-class ScheduleAPickup extends StatefulWidget {
-  const ScheduleAPickup({super.key});
+class AddPayPal extends StatefulWidget {
+  const AddPayPal({super.key});
 
   @override
-  State<ScheduleAPickup> createState() => _ScheduleAPickupState();
+  State<AddPayPal> createState() => _AddPayPalState();
 }
 
-class _ScheduleAPickupState extends State<ScheduleAPickup> {
+class _AddPayPalState extends State<AddPayPal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -120,28 +121,23 @@ class _ScheduleAPickupState extends State<ScheduleAPickup> {
                     fontWeight: FontWeight.w500,
                     color: Color(0XFF38106A)),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20,),
               Stack(
                 children: [
                   Container(
-                    decoration: BoxDecoration(
+                    decoration:BoxDecoration(
                         border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(10)),
+                        borderRadius: BorderRadius.circular(10)
+                    ),
                     child: Row(
                       children: [
-                        const SizedBox(
-                          width: 20,
-                        ),
+                        const SizedBox(width: 20,),
                         Image.asset(
                           "assets/images/24px.png",
                           height: 20,
                           width: 20,
                         ),
-                        const SizedBox(
-                          width: 10,
-                        ),
+                        const SizedBox(width: 10,),
                         const Column(
                           children: [
                             Text(
@@ -151,18 +147,11 @@ class _ScheduleAPickupState extends State<ScheduleAPickup> {
                                   fontSize: 14,
                                   color: Colors.grey),
                             ),
-                            Text(
-                              "10:00 AM",
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500,
-                                  color: Color(0XFF38106A)),
-                            )
+                            Text("10:00 AM", style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,
+                                color:Color(0XFF38106A) ),)
                           ],
                         ),
-                        const SizedBox(
-                          width: 40,
-                        ),
+                        const SizedBox(width: 40,),
                         Column(
                           children: [
                             Image.asset("assets/images/Vector5.png"),
@@ -170,35 +159,21 @@ class _ScheduleAPickupState extends State<ScheduleAPickup> {
                             Image.asset("assets/images/Vector7.png")
                           ],
                         ),
-                        const SizedBox(
-                          width: 30,
-                        ),
-                        Image.asset(
-                          "assets/images/25px.png",
-                          height: 24,
-                          width: 24,
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
+                        const SizedBox(width: 30,),
+                        Image.asset("assets/images/25px.png",height: 24,width: 24,),
+                        const SizedBox(width: 10,),
                         const Column(
                           children: [
-                            Text(
-                              "Web, 2 Apr",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0XFF38106A),
-                              ),
-                            ),
-                            Text(
-                              "21:00 PM",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 18,
-                                color: Color(0XFF38106A),
-                              ),
-                            )
+                            Text("Web, 2 Apr", style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14,
+                              color: Color(0XFF38106A),
+                            ),),
+                            Text("21:00 PM",style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                              color: Color(0XFF38106A),
+                            ),)
                           ],
                         )
                       ],
@@ -208,31 +183,26 @@ class _ScheduleAPickupState extends State<ScheduleAPickup> {
                     left: 55,
                     top: -3,
                     child: Container(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
+                      padding: const EdgeInsets.only(left: 10,right: 10),
                       color: Colors.white,
-                      child: const Text(
-                        "Picup TIme",
-                        style: TextStyle(color: Colors.black, fontSize: 12),
-                      ),
+                      child: const Text("Picup TIme",
+                        style: TextStyle(color: Colors.black, fontSize: 12),),
                     ),
                   ),
                   Positioned(
                     left: 230,
                     top: -3,
                     child: Container(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
+                      padding: const EdgeInsets.only(left: 10,right: 10),
                       color: Colors.white,
-                      child: const Text(
-                        "Delivery Time",
-                        style: TextStyle(color: Colors.black, fontSize: 12),
-                      ),
+                      child: const Text("Delivery Time",
+                        style: TextStyle(color: Colors.black, fontSize: 12),),
                     ),
                   )
                 ],
               ),
-              const SizedBox(
-                height: 20,
-              ),
+
+              const SizedBox(height: 20,),
               const Text(
                 "Payment Method",
                 style: TextStyle(
@@ -240,9 +210,7 @@ class _ScheduleAPickupState extends State<ScheduleAPickup> {
                     fontWeight: FontWeight.w500,
                     color: Color(0XFF38106A)),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20,),
               Container(
                 width: 361,
                 height: 218,
@@ -253,42 +221,39 @@ class _ScheduleAPickupState extends State<ScheduleAPickup> {
                         bottom: Radius.circular(30))),
                 child: Column(
                   children: [
-                    GestureDetector(
-                      onTap: (){},
-                      child: ListTile(
-                        leading: Image.asset(
-                          "assets/images/Ellipse16.png",
-                          width: 22,
-                          height: 22,
-                        ),
-                        title: const Text(
-                          "Pay Via Paypal",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                              color: Color(0XFF38106A)),
-                        ),
-                        subtitle: const Row(
-                          children: [
-                            Icon(
-                              Icons.add,
-                              color: Colors.pinkAccent,
-                              size: 14,
-                            ),
-                            Text(
-                              " Add account",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 12,
-                                  color: Colors.pinkAccent),
-                            )
-                          ],
-                        ),
-                        trailing: Image.asset(
-                          "assets/images/paypal.png",
-                          height: 34,
-                          width: 34,
-                        ),
+                    ListTile(
+                      leading: Image.asset(
+                        "assets/images/Ellipse16.png",
+                        width: 22,
+                        height: 22,
+                      ),
+                      title: const Text(
+                        "Pay Via Paypal",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                            color: Color(0XFF38106A)),
+                      ),
+                      subtitle: const Row(
+                        children: [
+                          Icon(
+                            Icons.add,
+                            color: Colors.pinkAccent,
+                            size: 14,
+                          ),
+                          Text(
+                            " Add account",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12,
+                                color: Colors.pinkAccent),
+                          )
+                        ],
+                      ),
+                      trailing: Image.asset(
+                        "assets/images/paypal.png",
+                        height: 34,
+                        width: 34,
                       ),
                     ),
                     ListTile(
@@ -352,82 +317,50 @@ class _ScheduleAPickupState extends State<ScheduleAPickup> {
                 width: 361,
                 height: 130,
                 decoration: const BoxDecoration(
-                  color: Color(0XFFF3F3F3),
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(30.0),
-                    bottom: Radius.circular(30),
-                  ),
-                ),
+                    color: Color(0XFFF3F3F3),
+                    borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(30.0),
+                        bottom: Radius.circular(30))),
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Row(
                     children: [
                       Column(
                         children: [
-                          Image.asset(
-                            "assets/images/start.png",
-                            width: 16,
-                            height: 16,
-                          ),
-                          Image.asset(
-                            "assets/images/Vector9.png",
-                            width: 16,
-                            height: 48,
-                          ),
-                          Image.asset(
-                            "assets/images/add.png",
-                            width: 24,
-                            height: 24,
-                          )
+                          Image.asset("assets/images/start.png",width: 16,height: 16,),
+                          Image.asset("assets/images/Vector9.png",width: 16,height: 48,),
+                          Image.asset("assets/images/add.png",width: 24,height: 24,)
                         ],
                       ),
-                      const SizedBox(
-                        width: 20,
-                      ),
+                      const SizedBox(width: 20,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            "Picup Address",
-                            style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0XFF38106A)),
-                          ),
-                          const Text(
-                            "CT7B The Sparks, KDT Duong Noi, Str. Ha Dong, "
-                            "Ha Noi",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                                color: Color(0XFF38106A)),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Image.asset(
-                            "assets/images/Line17.png",
-                            width: 270,
-                            color: const Color(0XFFE9EBF0),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Text(
-                            "Delivery Address",
-                            style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0XFF38106A)),
-                          ),
-                          const Text(
-                            "CT7B The Sparks, KDT Duong Noi, Str. Ha Dong, "
-                            "Ha Noi",
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                                color: Color(0XFF38106A)),
-                          ),
+                          const Text("Picup Address", style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0XFF38106A)
+                          ),),
+                          const Text("CT7B The Sparks, KDT Duong Noi, Str. Ha Dong, "
+                              "Ha Noi", style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0XFF38106A)
+                          ),),
+                          const SizedBox(height: 10,),
+                          Image.asset("assets/images/Line17.png",width: 270,color: const Color(0XFFE9EBF0),),
+                          const SizedBox(height: 10,),
+                          const Text("Delivery Address", style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0XFF38106A)
+                          ),),
+                          const Text("CT7B The Sparks, KDT Duong Noi, Str. Ha Dong, "
+                              "Ha Noi", style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0XFF38106A)
+                          ),),
                         ],
                       )
                     ],
@@ -438,7 +371,7 @@ class _ScheduleAPickupState extends State<ScheduleAPickup> {
           ),
         ),
       ),
-      bottomNavigationBar: const BottomAppBarWidget(),
+      bottomNavigationBar: const PayPalWidget(),
     );
   }
 }
