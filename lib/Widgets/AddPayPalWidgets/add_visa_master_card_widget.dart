@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laundary_app/Screens/HomePages/location_screen.dart';
 
 class VisaMasterWidget extends StatefulWidget {
   const VisaMasterWidget({super.key});
@@ -151,6 +152,7 @@ class _VisaMasterWidgetState extends State<VisaMasterWidget> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> LocationScreen()));
                 },
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,

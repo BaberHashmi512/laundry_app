@@ -55,6 +55,7 @@ class _PayPalWidgetState extends State<PayPalWidget> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () {
+
                 },
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,

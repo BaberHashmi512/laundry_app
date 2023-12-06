@@ -42,6 +42,7 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   toggle_switch: ^2.1.0
   dropdown_button2: ^2.3.9
+  google_maps_flutter: ^2.5.0
 
 dev_dependencies:
   flutter_test:

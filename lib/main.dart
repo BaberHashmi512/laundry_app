@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         useMaterial3: true,
       ),
-      home: SplashScreen()
+      home:AddVisaMasterCard()
+      // SplashScreen()
       // CurvedBottomNavigationBar()
     );
   }
