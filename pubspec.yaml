@@ -43,6 +43,7 @@ dependencies:
   toggle_switch: ^2.1.0
   dropdown_button2: ^2.3.9
   google_maps_flutter: ^2.5.0
+  modal_bottom_sheet: ^2.1.2
 
 dev_dependencies:
   flutter_test:
