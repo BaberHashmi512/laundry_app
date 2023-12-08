@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:laundary_app/Screens/HomePages/add_visa_master_card.dart';
 import 'package:laundary_app/Screens/HomePages/oder_detail.dart';
 import 'package:laundary_app/Screens/bottom_navigation_bar.dart';
+import 'package:laundary_app/Screens/order_detail_two.dart';
+import 'package:laundary_app/Screens/refer&earn.dart';
 import 'package:laundary_app/Screens/setting.dart';
 import 'package:laundary_app/Screens/splash.dart';
 
@@ -20,7 +22,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
         useMaterial3: true,
       ),
-      home: Settings()
+      home:
+      // ReferAndEarn()
+      // OrderDetailTwo(),
+      Settings()
       // OrderDetail()
       // AddVisaMasterCard()
       // SplashScreen()

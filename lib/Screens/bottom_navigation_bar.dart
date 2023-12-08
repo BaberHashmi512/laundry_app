@@ -2,6 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:laundary_app/Screens/HomePages/home_page.dart';
 import 'package:laundary_app/Screens/HomePages/order_list.dart';
+import 'package:laundary_app/Screens/setting.dart';
 class CurvedBottomNavigationBar extends StatefulWidget {
   const CurvedBottomNavigationBar({super.key});
 
@@ -13,6 +14,7 @@ class _CurvedBottomNavigationBarState extends State<CurvedBottomNavigationBar> {
   int currentTab = 0;
   final List screens =[
     HomePage(),
+    Settings(),
   ];
   final PageStorageBucket bucket =  PageStorageBucket();
   Widget currentScreen = HomePage();
@@ -87,6 +89,8 @@ class _CurvedBottomNavigationBarState extends State<CurvedBottomNavigationBar> {
                     minWidth: 40,
                     onPressed: (){
                       setState(() {
+                        currentScreen = Settings();
+                        currentTab = 4;
                       });
                     },
                     child: Icon(Icons.settings,size: 24,
